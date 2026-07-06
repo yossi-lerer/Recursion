@@ -40,3 +40,15 @@ def count_evens(numbers):
     else:
         return 0 + count_evens(numbers)
 print(count_evens([4, 7, 10, 3, 8]))
+# step 6 - Find Maximum Number
+def max_number(numbers, bigger=0):
+    if numbers == []:
+        return bigger
+    num = numbers.pop()
+    if num > bigger:
+        bigger = num
+        return max_number(numbers, bigger)
+    else:
+        return max_number(numbers, bigger)
+print(max_number([4, 9, 2, 11, 6]))
+    
