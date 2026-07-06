@@ -10,6 +10,15 @@ print(power(2,15))
 def factorial(n):
     if n == 0:
         return 1 
-    n -= 1
-    return (n + 1) * factorial(n)
+    return n * factorial(n -1) 
 print(factorial(5))
+# step 3 - Build a List From 1 to N
+def numbers_to_n(n):
+    if type(n) == int:
+        n = [n]
+    else:
+        n.insert(0, n[0] - 1)
+    if len(n) == n[-1]:
+        return n
+    return numbers_to_n(n)
+print(numbers_to_n(5))
