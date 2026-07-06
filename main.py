@@ -22,3 +22,11 @@ def numbers_to_n(n):
         return n
     return numbers_to_n(n)
 print(numbers_to_n(5))
+# step 4 - Count Items in a List
+def count_items(lst,sum=0):
+    if lst == []:
+        return sum
+    lst.pop()
+    sum += 1
+    return count_items(lst, sum)
+print(count_items(["h", "g", "d"]))
