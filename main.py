@@ -51,4 +51,12 @@ def max_number(numbers, bigger=0):
     else:
         return max_number(numbers, bigger)
 print(max_number([4, 9, 2, 11, 6]))
-    
+# step 7 - Reverse a String
+def reverse_string(text, reverse_str=""):
+    if len(text) == 0:
+        return reverse_str
+    w = text[-1]
+    text = text[:-1]
+    reverse_str += w
+    return reverse_string(text,reverse_str)  
+print(reverse_string("python"))
