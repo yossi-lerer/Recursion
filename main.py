@@ -30,3 +30,13 @@ def count_items(lst,sum=0):
     sum += 1
     return count_items(lst, sum)
 print(count_items(["h", "g", "d"]))
+# step 5 - Count Even Numbers in a List
+def count_evens(numbers):
+    if numbers == []:
+        return 0
+    num = numbers.pop()
+    if num % 2 == 0:
+        return 1 + count_evens(numbers)
+    else:
+        return 0 + count_evens(numbers)
+print(count_evens([4, 7, 10, 3, 8]))
