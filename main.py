@@ -76,3 +76,15 @@ def count_value(lst, value):
     else:
         return count_value(lst, value) + 0
 print(count_value([1, 2, 2, 3, 2], 2))
+# step 10 - Fibonacci
+def fibonacci(n):
+    lst = [0,1]
+    if n == 0:
+        lst = [0]
+        return lst
+    for num in range(1, n):
+        lst.append(num)
+    for fib in range(n - 2):
+        lst[fib + 3] = lst[fib + 2] + lst[fib + 1]
+    return lst
+print(fibonacci(10))
