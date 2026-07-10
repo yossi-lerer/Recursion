@@ -55,8 +55,24 @@ print(max_number([4, 9, 2, 11, 6]))
 def reverse_string(text, reverse_str=""):
     if len(text) == 0:
         return reverse_str
-    w = text[-1]
+    last = text[-1]
     text = text[:-1]
-    reverse_str += w
+    reverse_str += last
     return reverse_string(text,reverse_str)  
 print(reverse_string("python"))
+# step 8 - Check Palindrome
+# def is_palindrome(text, new_word ,Palindrome=""):
+#     if len(text) == len(Palindrome):
+#         return ""
+#     else: 
+#         return is_palindrome(text)
+# step 9 - Count How Many Times an Item Appears
+def count_value(lst, value):
+    if lst == []:
+        return 0
+    num = lst.pop()
+    if num == value:
+        return count_value(lst, value) + 1
+    else:
+        return count_value(lst, value) + 0
+print(count_value([1, 2, 2, 3, 2], 2))
