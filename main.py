@@ -61,11 +61,14 @@ def reverse_string(text, reverse_str=""):
     return reverse_string(text,reverse_str)  
 print(reverse_string("python"))
 # step 8 - Check Palindrome
-# def is_palindrome(text, new_word ,Palindrome=""):
-#     if len(text) == len(Palindrome):
-#         return ""
-#     else: 
-#         return is_palindrome(text)
+def is_palindrome(text):
+    if len(text) == 0:
+        return True
+    if text[0] != text[-1]:
+        return False
+    else:
+        return True and is_palindrome(text[1:-1]) 
+print(is_palindrome("abba"))
 # step 9 - Count How Many Times an Item Appears
 def count_value(lst, value):
     if lst == []:
